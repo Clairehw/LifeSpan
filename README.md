@@ -28,17 +28,15 @@ Life Span has always been a critical factor for making clinical treatment decisi
 - Data exploratoration
 
 We have age and medical notes for each patient. The medical notes are from numerous different hospitals, scanned and then converted into one large text corpus. Therefore, all sorts of information, such as doctor visits, prescription medicine, fall incidents, patient identity, address, email correspondences, legal information are interwoven together, making this task even challenging.
-
 <p align="center"> <img src="/Images/wordcloud.png" width="300" height="350">  </p>
 
 - Preprocessing
  1. Remove outliers. We remove medical notes with age larger than 110 years, remaining life span predictions larger then 250 months, and medical notes with length larger than 2000 words.
- 
- <img src="/Images/data_cleaning.jpg" width="50%" height="50%">
+ <p align="center"> <img src="/Images/data_cleaning.jpg" width="50%" height="50%"> </p>
  2. Remove punctuation, unrecognized symbols and convert text to lowercase
  3. Tokenization
- 4. Remove stop words, Stemming and Lemmatization
- ![GitHub Logo](/Images/nlp_pipeline.jpg){:height="50%" width="50%"}
+ 4. Remove stop words, Stemming and Lemmatization 
+ <p align="center"> <img src="/Images/nlp_pipeline.jpg" width="50%" height="50%"> </p>
 - Text vectorization. 
   
  We apply two different techniques for vectorizing the text data. 
