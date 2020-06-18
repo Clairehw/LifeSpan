@@ -28,18 +28,20 @@ Life Span has always been a critical factor for making clinical treatment decisi
 - Data exploratoration
 
 We have age and medical notes for each patient. The medical notes are from numerous different hospitals, scanned and then converted into one large text corpus. Therefore, all sorts of information, such as doctor visits, prescription medicine, fall incidents, patient identity, address, email correspondences, legal information are interwoven together, making this task even challenging.
+![GitHub Logo](/Images/wordcloud.jpg)
 
 - Preprocessing
  1. Remove outliers. We remove medical notes with age larger than 110 years, remaining life span predictions larger then 250 months, and medical notes with length larger than 2000 words.
- ! [image] eda.jpg
  ![GitHub Logo](/Images/data_cleaning.jpg)
- 2. Remove punctuation, unrecognized symbols and convert text to lowercase 
+ 2. Remove punctuation, unrecognized symbols and convert text to lowercase
  3. Tokenization
  4. Remove stop words, Stemming and Lemmatization
+ ![GitHub Logo](/Images/nlp_pipeline.jpg)
 - Text vectorization. 
   
  We apply two different techniques for vectorizing the text data. 
- 1. TF-IDF
+ 1. TF-IDF 
+ TF-IDF generated a 227k words vocabulary, which is quite a challenging for computing. A closer look at the frequency of the vocabulary, around 4000 words presented 99% of the total word frequencies. Taking the most frequent 4000 words, I converted the text medical notes to a 4000-dimension vector.
  2. Word2Vec
 - Model building and evaluation
   1. Evaluation metric
