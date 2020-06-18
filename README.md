@@ -20,17 +20,19 @@ A Health Data Science project at [Insight Health Data Science](https://insightfe
 ---
 
 ### Overview
-Life Span has always been a critical factor for making clinical treatment decisions. Many medical interventions have guidelines that suggests physicians take a patient’s prognostic life span into account. Most of the predictions today, however, are domain specific and inaccurate, which only look at the statistics of survival rate for a certain disease without considering long-term and distinct medical conditions for each patient. In the meantime, physicians’ estimates of remaining life span are often inaccurate and overly optimistic. This project is dedicated to utilizing natural language processing techniques and machine learning models to predict prognostic life span based on patient medical records. The model aims to build an agnostic model that predicts lifespan for various diseases with low error and variance. 
+Life Span has always been a critical factor for making clinical treatment decisions. Many medical interventions have guidelines that suggests physicians take a patient’s prognostic life span into account. Most of the predictions today, however, are domain specific and inaccurate, which only look at the statistics of survival rate for a certain disease without considering long-term and distinct medical conditions for each patient. In the meantime, physicians’ estimates of remaining life span are often inaccurate and overly optimistic. 
+
+This project is dedicated to utilizing natural language processing techniques and machine learning models to predict prognostic life span based on patient medical records. The model aims to build an agnostic model that predicts lifespan for various diseases with low error and variance. 
 
 ---
 ### Pipeline
 
-- Data exploratoration
+-#### Data exploratoration
 
 We have age and medical notes for each patient. The medical notes are from numerous different hospitals, scanned and then converted into one large text corpus. Therefore, all sorts of information, such as doctor visits, prescription medicine, fall incidents, patient identity, address, email correspondences, legal information are interwoven together, making this task even challenging.
 <p align="center"> <img src="/Images/wordcloud.png" width="300" height="350">  </p>
 
-- Preprocessing
+-#### Preprocessing
  1. Remove outliers. We remove medical notes with age larger than 110 years, remaining life span predictions larger then 250 months, and medical notes with length larger than 2000 words.
  <p align="center"> <img src="/Images/data_cleaning.jpg" width="70%" height="70%"> </p>
  
@@ -40,7 +42,7 @@ We have age and medical notes for each patient. The medical notes are from numer
  
  <p align="center"> <img src="/Images/nlp_pipeline.jpg" width="70%" height="70%"> </p>
  
-- Text vectorization. 
+-#### Text vectorization. 
  
  We apply two different techniques for vectorizing the text data. 
  1. TF-IDF 
