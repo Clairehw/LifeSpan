@@ -57,5 +57,5 @@ We have age and medical notes for each patient. The medical notes are from numer
 
 --- 
 ### Results
-<p align="center"> <img src="/Images/RF_r2.png" width="70%" height="70%">  </p>
+<p align="center"> <img src="/Images/RF_r2.jpg" width="70%" height="70%">  </p>
 
