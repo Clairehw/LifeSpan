@@ -51,6 +51,7 @@ The data comes with age and medical notes for each patient. The medical notes ar
  1. TF-IDF 
  
  TF-IDF generated a 227k words vocabulary, which is quite a challenging for computing. A closer look at the frequency of the vocabulary, around 4000 words presented 99% of the total word frequencies. Taking the most frequent 4000 words, I converted the text medical notes to a 4000-dimension vector.
+ 
  2. Word2Vec
  
  We make use of the pretrained Word2Vec library Spacy to convert each word to a 300-dimension vector. To represent the entire notes for each patient, we simply apply element-wise addition to get a note level vector representation
