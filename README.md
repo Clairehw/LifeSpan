@@ -1,2 +1,52 @@
-# life-span-prediction
-This project Insight Health Data Science Fellow Consulting Project
+# LifeSpan
+# Predict Remaining Life Span from Long Term Historical Medical Notes
+
+A Health Data Science project at [Insight Health Data Science](https://insightfellows.com/health-data) by Claire Wu.
+
+
+[Google Slides]() * [Medium]() * [LinkedIn]() * [Resume]() * [Portfolio]()
+
+- Summary: This project built a model to predict life span of patients with various diseases based on their medical notes.
+- Keywords: Random Forest, Neural Newtork, TF-IDF, Word2vec 
+- Libraries: sklearn, keras, tensorflow, LSTM, Matplotlib, NLTK, Spacy, pandas, numpy, wordcloud
+
+
+---
+## Table of content
+- [Overview](#overview)
+- [Pipeline](#pipeline)
+- [Results](#results)
+
+---
+
+### Overview
+Life expectancy has always been a critical factor for making clinical treatment decisions. Many medical interventions have guidelines that suggests physicians take a patient’s prognostic life expectancy into account. Most of the predictions today, however, are domain specific and inaccurate, which only look at the statistics of survival rate for a certain disease without considering long-term and distinct medical conditions for each patient. In the meantime, physicians’ estimates of remaining life span are often inaccurate and overly optimistic. This project is dedicated to utilizing natural language processing techniques and machine learning models to predict prognostic life span based on patient medical records. The model aims to build an agnostic model that predicts lifespan for various diseases with low error and variance. 
+
+---
+### Pipeline
+
+- Data exploratoration
+
+We have age and medical notes for each patient. The medical notes are from numerous different hospitals, scanned and then converted into one large text corpus. Therefore, all sorts of information, such as doctor visits, prescription medicine, fall incidents, patient identity, address, email correspondences, legal information are interwoven together, making this task even challenging.
+
+- Preprocessing
+ 1. Remove outliers. We remove records with age larger than 1000 months, predictions larger then 250 months, and medical notes length larger than 2000 words.
+ 2. Remove punctuation, unrecognized symbols and convert text to lowercase 
+ 3. Tokenization
+ 4. Remove stop words, Stemming and Lemmatization
+- Text vectorization. 
+  
+ We apply two different techniques for vectorizing the text data. 
+ 1. TF-IDF
+ 2. Word2Vec
+- Model building and evaluation
+  1. Evaluation metric
+  
+   R squared is a goodness-of-fit measure for regression models. It indicates the percentage of the variance in the target that are explained by the input values. R squared is intuitive since it measures the strength of the relationship between the model and target on a convenient 0–100% scale. The higher the better. 
+  
+  2. Model training
+
+
+
+--- 
+### Results
