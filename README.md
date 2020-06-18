@@ -33,7 +33,9 @@ The data comes with age and medical notes for each patient. The medical notes ar
 <p align="center"> <img src="/Images/wordcloud.png" width="300" height="350">  </p>
 
 #### 2. Preprocessing
- - Remove outliers. The geriatric dataset is highly heterogeneous which contains medical notes longer than 2000 words, with age larger than 110 years, and remaining life span predictions larger then 250 months.  
+ - Remove outliers. 
+ 
+ The geriatric dataset is highly heterogeneous which contains medical notes longer than 2000 words, with age larger than 110 years, and remaining life span predictions larger then 250 months.  
  <p align="center"> <img src="/Images/data_cleaning.jpg" width="70%" height="70%"> </p>
  
  - Remove punctuation, unrecognized symbols and convert text to lowercase
@@ -45,9 +47,12 @@ The data comes with age and medical notes for each patient. The medical notes ar
 #### 3. Text vectorization. 
  
  We apply two different techniques for vectorizing the text data. 
+ 
  1. TF-IDF 
+ 
  TF-IDF generated a 227k words vocabulary, which is quite a challenging for computing. A closer look at the frequency of the vocabulary, around 4000 words presented 99% of the total word frequencies. Taking the most frequent 4000 words, I converted the text medical notes to a 4000-dimension vector.
  2. Word2Vec
+ 
  We make use of the pretrained Word2Vec library Spacy to convert each word to a 300-dimension vector. To represent the entire notes for each patient, we simply apply element-wise addition to get a note level vector representation
  
 #### 4. Model building and evaluation
@@ -56,9 +61,11 @@ The data comes with age and medical notes for each patient. The medical notes ar
    R squared is a goodness-of-fit measure for regression models. It indicates the percentage of the variance in the target that are explained by the input values. R squared is intuitive since it measures the strength of the relationship between the model and target on a convenient 0–100% scale. The higher the better. 
   
   2. Models
+  
   Life span is a complex problem which doesn't likely to be a linear relation between features and targets. In the meatime, the features in medical notes are highly correlated. These factors restricted us to models with less assumptions. Random Forest is a good model suits our problem with relative interpretability. In addition, we also included a Multilayer Perceptron model to better advance the model fitting and prediction. In reality, when interpretability to doctors outweights prediction precision, we can choose random forest, if vice versa, multilayer perceptron is a better choice. 
   
   3. Data Split
+  
   Data were split into 70%/10%/20% for training/validation/testing.
   
   4. Model Prediction
@@ -67,5 +74,12 @@ The data comes with age and medical notes for each patient. The medical notes ar
 
 --- 
 ### Results
+
+1. Random Forest R-squared and Feature Importances
+
 <p align="center"> <img src="/Images/RF_r2.jpg" width="70%" height="70%">  </p>
+
+2. Multilayer Perceptron R-squared and Mean Absolute Residual
+
+<p align="center"> <img src="/Images/mlp.jpg" width="70%" height="70%">  </p>
 
