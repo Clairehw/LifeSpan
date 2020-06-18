@@ -41,7 +41,7 @@ We have age and medical notes for each patient. The medical notes are from numer
  <p align="center"> <img src="/Images/nlp_pipeline.jpg" width="70%" height="70%"> </p>
  
 - Text vectorization. 
-  
+ 
  We apply two different techniques for vectorizing the text data. 
  1. TF-IDF 
  TF-IDF generated a 227k words vocabulary, which is quite a challenging for computing. A closer look at the frequency of the vocabulary, around 4000 words presented 99% of the total word frequencies. Taking the most frequent 4000 words, I converted the text medical notes to a 4000-dimension vector.
