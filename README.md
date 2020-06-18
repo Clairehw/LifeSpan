@@ -32,11 +32,14 @@ We have age and medical notes for each patient. The medical notes are from numer
 
 - Preprocessing
  1. Remove outliers. We remove medical notes with age larger than 110 years, remaining life span predictions larger then 250 months, and medical notes with length larger than 2000 words.
- <p align="center"> <img src="/Images/data_cleaning.jpg" width="50%" height="50%"> </p>
+ <p align="center"> <img src="/Images/data_cleaning.jpg" width="70%" height="70%"> </p>
+ 
  2. Remove punctuation, unrecognized symbols and convert text to lowercase
  3. Tokenization
  4. Remove stop words, Stemming and Lemmatization 
- <p align="center"> <img src="/Images/nlp_pipeline.jpg" width="50%" height="50%"> </p>
+ 
+ <p align="center"> <img src="/Images/nlp_pipeline.jpg" width="70%" height="70%"> </p>
+ 
 - Text vectorization. 
   
  We apply two different techniques for vectorizing the text data. 
