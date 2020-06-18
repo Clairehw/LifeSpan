@@ -4,7 +4,7 @@
 A Health Data Science project at [Insight Health Data Science](https://insightfellows.com/health-data) by Claire Hui Wu.
 
 
-[Google Slides]() * [Medium]() * [LinkedIn]() * [Resume]() * [Portfolio]()
+[Google Slides](https://docs.google.com/presentation/d/18Ph5_INtyxQMbcbIq_TOm40JN6EpjeSZi1HLGoyNUWs/edit?usp=sharing) * [Medium](https://medium.com/@chwu1811/lifespan-predict-life-span-based-on-long-term-medical-records-6bda5e3f1c47?sk=1789d7f732de41a999eec642ba69546d) * [LinkedIn](https://www.linkedin.com/in/clairehwu/)
 
 - Summary: This project built a model to predict life span of patients with various diseases based on their medical notes.
 - Keywords: Random Forest, Neural Newtork, TF-IDF, Word2vec 
